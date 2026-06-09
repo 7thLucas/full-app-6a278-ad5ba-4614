@@ -42,7 +42,7 @@ function AddTaskForm({ onAdd, addButtonLabel }: AddTaskFormProps) {
       e.preventDefault();
       const trimmed = title.trim();
       if (!trimmed) {
-        setError("Task title cannot be empty.");
+        setError("!!!!! Task title cannot be empty.");
         titleRef.current?.focus();
         return;
       }
