@@ -15,32 +15,25 @@ export type TBrandColor = {
 export type TDefaultConfigurableData = {
   appName: string;
   logoUrl: string;
+  tagline?: string;
   brandColor: TBrandColor;
-  // Mirror new schema fields here. Example:
-  //   maxItemsPerPage?: number;
-  //   enableNotifications?: boolean;
-  //   featuredCategories?: string[];
+  emptyStateMessage?: string;
+  addTaskButtonLabel?: string;
+  activeFilterLabel?: string;
+  completedFilterLabel?: string;
 };
 
 export const defaultConfigurablesData: TDefaultConfigurableData = {
-  appName: "FILL_APP_NAME_HERE",
+  appName: "MyToDo",
   logoUrl: "FILL_LOGO_URL_HERE",
+  tagline: "Your tasks. Your pace. Your way.", // fill it here
   brandColor: {
-    primary: "FILL_PRIMARY_COLOR_HERE",
-    secondary: "FILL_SECONDARY_COLOR_HERE",
-    accent: "FILL_ACCENT_COLOR_HERE",
+    primary: "#4f46e5",
+    secondary: "#10b981",
+    accent: "#f1f5f9",
   },
-  // ─────────────────────────────────────────────────────────────────────
-  // Add new field defaults here. See RULES.md §5 for per-type shape.
-  // Required branding fields → use the FILL_X_HERE placeholder pattern.
-  // Optional/typed defaults → real value with a "// fill it here" comment:
-  //
-  //   maxItemsPerPage: 12,                     // fill it here
-  //   enableNotifications: true,               // fill it here
-  //   featuredCategories: [],                  // fill it here
-  //   defaultLanguage: "en",                   // must match enum options
-  //   launchDate: "2025-01-01T00:00:00.000Z",  // ISO-8601
-  //   heroImage: "",                           // resolved URL after upload
-  //   galleryImages: [],                       // array of resolved URLs
-  // ─────────────────────────────────────────────────────────────────────
+  emptyStateMessage: "Nothing here yet — add your first task above.", // fill it here
+  addTaskButtonLabel: "Add Task", // fill it here
+  activeFilterLabel: "Active", // fill it here
+  completedFilterLabel: "Completed", // fill it here
 };

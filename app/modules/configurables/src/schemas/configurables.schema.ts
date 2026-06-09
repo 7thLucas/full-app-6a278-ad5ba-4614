@@ -46,6 +46,13 @@ export const configurableSchemas: ConfigurableSchemas = {
       label: "Logo URL",
     },
     {
+      fieldName: "tagline",
+      type: "string",
+      required: false,
+      label: "Tagline",
+      maxLength: 100,
+    },
+    {
       fieldName: "brandColor",
       type: "object",
       required: true,
@@ -70,6 +77,34 @@ export const configurableSchemas: ConfigurableSchemas = {
           label: "Accent",
         },
       ],
+    },
+    {
+      fieldName: "emptyStateMessage",
+      type: "string",
+      required: false,
+      label: "Empty State Message",
+      maxLength: 200,
+    },
+    {
+      fieldName: "addTaskButtonLabel",
+      type: "string",
+      required: false,
+      label: "Add Task Button Label",
+      maxLength: 50,
+    },
+    {
+      fieldName: "activeFilterLabel",
+      type: "string",
+      required: false,
+      label: "Active Filter Label",
+      maxLength: 30,
+    },
+    {
+      fieldName: "completedFilterLabel",
+      type: "string",
+      required: false,
+      label: "Completed Filter Label",
+      maxLength: 30,
     },
   ],
 };
