@@ -11,8 +11,8 @@ import { createLogger } from "~/lib/logger";
 const logger = createLogger("TasksRoutes");
 const router = Router();
 
-// GET /api/tasks?filter=active|completed|all
-router.get("/api/tasks", async (req: Request, res: Response) => {
+// GET /tasks?filter=active|completed|all
+router.get("/tasks", async (req: Request, res: Response) => {
   try {
     const filter = (req.query.filter as string) ?? "all";
     const validFilters = ["active", "completed", "all"];
@@ -25,8 +25,8 @@ router.get("/api/tasks", async (req: Request, res: Response) => {
   }
 });
 
-// GET /api/tasks/:id
-router.get("/api/tasks/:id", async (req: Request, res: Response) => {
+// GET /tasks/:id
+router.get("/tasks/:id", async (req: Request, res: Response) => {
   try {
     const task = await getTaskById(req.params.id);
     if (!task) return res.status(404).json({ error: "Task not found" });
@@ -37,8 +37,8 @@ router.get("/api/tasks/:id", async (req: Request, res: Response) => {
   }
 });
 
-// POST /api/tasks
-router.post("/api/tasks", async (req: Request, res: Response) => {
+// POST /tasks
+router.post("/tasks", async (req: Request, res: Response) => {
   try {
     const { title, dueDate, priority } = req.body;
     if (!title || typeof title !== "string" || title.trim() === "") {
@@ -52,8 +52,8 @@ router.post("/api/tasks", async (req: Request, res: Response) => {
   }
 });
 
-// PATCH /api/tasks/:id
-router.patch("/api/tasks/:id", async (req: Request, res: Response) => {
+// PATCH /tasks/:id
+router.patch("/tasks/:id", async (req: Request, res: Response) => {
   try {
     const task = await updateTask(req.params.id, req.body);
     if (!task) return res.status(404).json({ error: "Task not found" });
@@ -64,8 +64,8 @@ router.patch("/api/tasks/:id", async (req: Request, res: Response) => {
   }
 });
 
-// DELETE /api/tasks/:id
-router.delete("/api/tasks/:id", async (req: Request, res: Response) => {
+// DELETE /tasks/:id
+router.delete("/tasks/:id", async (req: Request, res: Response) => {
   try {
     const task = await deleteTask(req.params.id);
     if (!task) return res.status(404).json({ error: "Task not found" });
