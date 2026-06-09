@@ -1,0 +1,68 @@
+<style>
+  .mode-landscape .sl-layout {
+    flex-direction: row;
+  }
+  .mode-portrait .sl-layout {
+    flex-direction: column;
+  }
+  .mode-landscape .sl-visual {
+    width: 45%;
+    height: 100%;
+  }
+  .mode-portrait .sl-visual {
+    width: 100%;
+    height: 40%;
+  }
+  .mode-landscape .sl-content {
+    width: 55%;
+    height: 100%;
+    justify-content: center;
+  }
+  .mode-portrait .sl-content {
+    width: 100%;
+    flex: 1;
+    justify-content: flex-end;
+    padding-bottom: 2.5rem;
+  }
+</style>
+
+<section class="w-full h-full overflow-auto bg-white">
+  <div class="sl-layout flex w-full h-full">
+    <!-- Content column -->
+    <div class="sl-content flex flex-col p-12 gap-6">
+      <!-- Eyebrow -->
+      <span class="text-xs font-semibold uppercase tracking-widest text-indigo-500">Task Management</span>
+
+      <!-- Headline -->
+      <h1 class="text-5xl font-black leading-tight text-slate-900">
+        Your tasks.<br/>
+        Your pace.<br/>
+        <span class="text-indigo-600">Your way.</span>
+      </h1>
+
+      <!-- Tagline -->
+      <p class="text-lg text-slate-500 max-w-xs leading-relaxed">
+        MyToDo helps you capture what matters, set due dates and priorities, and focus on what's actually next — nothing more.
+      </p>
+
+      <!-- Divider -->
+      <div class="w-12 h-1 rounded-full bg-indigo-500 mt-2"></div>
+
+      <!-- Attribution placeholder -->
+      <div class="mt-auto">
+        <data-attribution />
+      </div>
+    </div>
+
+    <!-- Visual column -->
+    <div class="sl-visual relative overflow-hidden bg-indigo-50 flex items-center justify-center">
+      <img
+        src="https://api.qb-deck.quantumbyte.ai/common/image-generation?prompt=minimalist%20productivity%20app%20interface%20showing%20a%20clean%20to-do%20list%20with%20priority%20tags%20and%20due%20dates%2C%20soft%20indigo%20tones%2C%20editorial%20style%2C%20overhead%20flat-lay%20on%20light%20background"
+        alt="MyToDo interface preview"
+        class="w-full h-full object-cover"
+      />
+      <!-- Subtle overlay -->
+      <div class="absolute inset-0 bg-indigo-600 opacity-10 pointer-events-none"></div>
+    </div>
+  </div>
+</section>
