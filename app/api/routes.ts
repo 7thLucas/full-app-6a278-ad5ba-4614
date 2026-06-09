@@ -3,6 +3,7 @@ import { readdir } from "node:fs/promises";
 import { pathToFileURL } from "node:url";
 import { Router } from "express";
 import { createLogger } from "~/lib/logger";
+import taskRoutes from "~/tasks/src/routes/tasks.routes";
 
 type RouteModule = {
   default?: ReturnType<typeof Router>;
@@ -61,5 +62,8 @@ async function registerModuleRoutes(): Promise<void> {
 }
 
 await registerModuleRoutes();
+
+// Register task routes (app/tasks lives outside app/modules, so auto-discovery skips it)
+router.use(taskRoutes);
 
 export default router;
