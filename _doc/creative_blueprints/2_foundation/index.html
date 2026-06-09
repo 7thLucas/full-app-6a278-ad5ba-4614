@@ -1,0 +1,72 @@
+<style>
+  .mode-landscape .sl-layout {
+    flex-direction: row;
+    align-items: stretch;
+  }
+  .mode-portrait .sl-layout {
+    flex-direction: column;
+  }
+  .mode-landscape .sl-narrative {
+    width: 55%;
+  }
+  .mode-portrait .sl-narrative {
+    width: 100%;
+  }
+  .mode-landscape .sl-visual {
+    width: 45%;
+  }
+  .mode-portrait .sl-visual {
+    width: 100%;
+    height: 220px;
+  }
+</style>
+
+<section class="w-full h-full overflow-auto bg-white">
+  <div class="sl-layout flex w-full h-full">
+
+    <!-- Narrative column -->
+    <div class="sl-narrative flex flex-col p-12 gap-8 justify-center">
+
+      <!-- The Problem -->
+      <div class="flex flex-col gap-3">
+        <div class="flex items-center gap-2">
+          <span class="w-3 h-3 rounded-full bg-rose-500 inline-block"></span>
+          <span class="text-xs font-bold uppercase tracking-widest text-rose-500">The Problem</span>
+        </div>
+        <h2 class="text-2xl font-bold text-slate-900 leading-snug">
+          Tasks pile up. Priorities blur. Nothing actually gets done.
+        </h2>
+        <p class="text-slate-500 text-sm leading-relaxed max-w-sm">
+          Without a clear system, people lose track of what needs doing today, forget deadlines, and can't tell what's truly important from what's just loud. The result: stress, missed commitments, and a growing pile of "I'll do it later."
+        </p>
+      </div>
+
+      <!-- Divider -->
+      <div class="w-full h-px bg-slate-100"></div>
+
+      <!-- The Solution -->
+      <div class="flex flex-col gap-3">
+        <div class="flex items-center gap-2">
+          <span class="w-3 h-3 rounded-full bg-indigo-500 inline-block"></span>
+          <span class="text-xs font-bold uppercase tracking-widest text-indigo-500">The Solution</span>
+        </div>
+        <h2 class="text-2xl font-bold text-slate-900 leading-snug">
+          MyToDo: one focused place for everything that matters.
+        </h2>
+        <p class="text-slate-500 text-sm leading-relaxed max-w-sm">
+          Add tasks with due dates and priorities, mark them done as you go, and filter between active and completed so your list only ever shows you what's relevant right now.
+        </p>
+      </div>
+    </div>
+
+    <!-- Visual column -->
+    <div class="sl-visual relative overflow-hidden bg-slate-50 flex items-center justify-center">
+      <img
+        src="https://api.qb-deck.quantumbyte.ai/common/image-generation?prompt=stressed%20person%20at%20a%20cluttered%20desk%20surrounded%20by%20sticky%20notes%20and%20unfinished%20tasks%2C%20versus%20calm%20minimalist%20workspace%20with%20organized%20digital%20checklist%2C%20split%20concept%2C%20soft%20editorial%20lighting"
+        alt="Problem vs Solution visual"
+        class="w-full h-full object-cover"
+      />
+    </div>
+
+  </div>
+</section>
