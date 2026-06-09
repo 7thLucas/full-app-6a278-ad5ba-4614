@@ -1,72 +1,105 @@
 <style>
-  .mode-landscape .sl-grid {
-    grid-template-columns: repeat(2, 1fr);
+  .sl-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
   }
   .mode-portrait .sl-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
   }
 </style>
 
 <section class="w-full h-full overflow-auto bg-white">
-  <div class="flex flex-col w-full h-full p-12 gap-8">
+  <div class="flex flex-col w-full h-full p-10 gap-5">
 
     <!-- Header -->
-    <div class="flex flex-col gap-2">
-      <span class="text-xs font-bold uppercase tracking-widest text-indigo-500">What It Does</span>
-      <h2 class="text-3xl font-black text-slate-900">Core Features</h2>
-      <p class="text-slate-400 text-sm max-w-lg">Everything you need to stay on top of your tasks — and nothing you don't.</p>
-    </div>
-
-    <!-- Persona chip -->
-    <div class="flex gap-2 flex-wrap">
-      <span class="px-3 py-1 rounded-full bg-indigo-600 text-white text-xs font-semibold">Everyday User</span>
+    <div class="flex items-end justify-between">
+      <div class="flex flex-col gap-1">
+        <span class="text-xs font-bold uppercase tracking-widest text-indigo-600">What It Does</span>
+        <h2 class="text-3xl font-black text-slate-900">Everything you need. Nothing you don't.</h2>
+      </div>
+      <!-- Persona chip -->
+      <span class="px-3 py-1 rounded-full bg-indigo-600 text-white text-xs font-semibold flex-shrink-0">Everyday User</span>
     </div>
 
     <!-- Feature cards grid -->
-    <div class="sl-grid grid gap-4 flex-1">
+    <div class="sl-grid gap-4 flex-1">
 
-      <!-- Add tasks -->
-      <div class="flex flex-col gap-3 rounded-2xl border border-slate-100 bg-slate-50 p-6">
-        <div class="w-9 h-9 rounded-xl bg-indigo-100 flex items-center justify-center">
-          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-indigo-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <!-- 1. Add Tasks -->
+      <div class="flex flex-col gap-3 rounded-2xl bg-indigo-600 p-5">
+        <div class="w-9 h-9 rounded-xl bg-white bg-opacity-20 flex items-center justify-center">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
             <line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/>
           </svg>
         </div>
-        <h3 class="font-bold text-slate-900 text-base">Add Tasks Instantly</h3>
-        <p class="text-slate-500 text-sm leading-relaxed">Quickly capture any task with a name, due date, and priority level — so nothing slips through the cracks.</p>
+        <div>
+          <h3 class="font-bold text-white text-sm mb-1">Add Tasks</h3>
+          <p class="text-indigo-200 text-xs leading-relaxed">Capture anything fast — title, due date, and priority level in one quick form, no friction.</p>
+        </div>
       </div>
 
-      <!-- Due dates -->
-      <div class="flex flex-col gap-3 rounded-2xl border border-slate-100 bg-slate-50 p-6">
+      <!-- 2. Due Dates -->
+      <div class="flex flex-col gap-3 rounded-2xl border border-slate-100 bg-slate-50 p-5">
         <div class="w-9 h-9 rounded-xl bg-indigo-100 flex items-center justify-center">
-          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-indigo-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#4f46e5" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
             <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/>
           </svg>
         </div>
-        <h3 class="font-bold text-slate-900 text-base">Due Dates</h3>
-        <p class="text-slate-500 text-sm leading-relaxed">Assign a deadline to every task so you always know when something is due and can plan your day accordingly.</p>
+        <div>
+          <h3 class="font-bold text-slate-900 text-sm mb-1">Due Dates</h3>
+          <p class="text-slate-500 text-xs leading-relaxed">Attach a target date to every task so deadlines stay visible and nothing slips.</p>
+        </div>
       </div>
 
-      <!-- Priority levels -->
-      <div class="flex flex-col gap-3 rounded-2xl border border-indigo-100 bg-indigo-50 p-6">
+      <!-- 3. Priorities -->
+      <div class="flex flex-col gap-3 rounded-2xl border border-indigo-100 bg-indigo-50 p-5">
         <div class="w-9 h-9 rounded-xl bg-indigo-600 flex items-center justify-center">
-          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
             <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
           </svg>
         </div>
-        <h3 class="font-bold text-indigo-900 text-base">Priority Levels</h3>
-        <p class="text-indigo-700 text-sm leading-relaxed">Tag tasks as high, medium, or low priority — so your attention naturally flows to what actually matters most.</p>
+        <div>
+          <h3 class="font-bold text-indigo-900 text-sm mb-1">Priorities</h3>
+          <p class="text-indigo-700 text-xs leading-relaxed">High, Medium, or Low — always know what demands your attention first without having to think about it.</p>
+        </div>
       </div>
 
-      <!-- Filter active / completed -->
-      <div class="flex flex-col gap-3 rounded-2xl border border-slate-100 bg-slate-50 p-6">
+      <!-- 4. Mark as Done -->
+      <div class="flex flex-col gap-3 rounded-2xl bg-emerald-500 p-5">
+        <div class="w-9 h-9 rounded-xl bg-white bg-opacity-25 flex items-center justify-center">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="20 6 9 17 4 12"/>
+          </svg>
+        </div>
+        <div>
+          <h3 class="font-bold text-white text-sm mb-1">Mark as Done</h3>
+          <p class="text-emerald-100 text-xs leading-relaxed">Check off tasks with a single tap — feel the satisfaction of a shrinking list and a sense of real progress.</p>
+        </div>
+      </div>
+
+      <!-- 5. Filter Views -->
+      <div class="flex flex-col gap-3 rounded-2xl border border-slate-100 bg-slate-50 p-5">
         <div class="w-9 h-9 rounded-xl bg-indigo-100 flex items-center justify-center">
-          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-indigo-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#4f46e5" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
             <polyline points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/>
           </svg>
         </div>
-        <h3 class="font-bold text-slate-900 text-base">Active / Completed Filter</h3>
-        <p class="text-slate-500 text-sm leading-relaxed">Switch between your active task list and completed tasks in one click — keep your view clean and focused.</p>
+        <div>
+          <h3 class="font-bold text-slate-900 text-sm mb-1">Filter Views</h3>
+          <p class="text-slate-500 text-xs leading-relaxed">Switch between Active and Completed at a tap — keep your working list focused on what still needs doing.</p>
+        </div>
+      </div>
+
+      <!-- 6. Personal & Private -->
+      <div class="flex flex-col gap-3 rounded-2xl bg-slate-900 p-5">
+        <div class="w-9 h-9 rounded-xl bg-white bg-opacity-10 flex items-center justify-center">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+          </svg>
+        </div>
+        <div>
+          <h3 class="font-bold text-white text-sm mb-1">Personal &amp; Private</h3>
+          <p class="text-slate-400 text-xs leading-relaxed">No accounts, no sync overhead. Your tasks are yours — private and instant from the first tap.</p>
+        </div>
       </div>
 
     </div>
