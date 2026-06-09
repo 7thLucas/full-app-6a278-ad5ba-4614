@@ -1,0 +1,55 @@
+<style>
+  .mode-landscape .sl-metrics-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .mode-portrait .sl-metrics-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+</style>
+
+<section class="w-full h-full overflow-auto bg-white">
+  <div class="flex flex-col w-full h-full p-12 gap-8">
+
+    <!-- Header -->
+    <div class="flex flex-col gap-2">
+      <span class="text-xs font-bold uppercase tracking-widest text-indigo-500">Why It Matters</span>
+      <h2 class="text-3xl font-black text-slate-900">The Real Benefits</h2>
+      <p class="text-slate-400 text-sm max-w-lg">MyToDo turns good intentions into consistent action by removing friction between you and your work.</p>
+    </div>
+
+    <!-- Metric cards -->
+    <div class="sl-metrics-grid grid gap-4">
+
+      <div class="flex flex-col gap-1 rounded-2xl border border-slate-100 bg-slate-50 p-5">
+        <span class="text-xs font-semibold uppercase tracking-wide text-indigo-400">Clarity</span>
+        <span class="text-3xl font-black text-indigo-600">100%</span>
+        <span class="text-slate-500 text-xs leading-relaxed">of your tasks visible in one place — no more scattered sticky notes or forgotten reminders.</span>
+      </div>
+
+      <div class="flex flex-col gap-1 rounded-2xl border border-slate-100 bg-slate-50 p-5">
+        <span class="text-xs font-semibold uppercase tracking-wide text-indigo-400">Focus</span>
+        <span class="text-3xl font-black text-indigo-600">3×</span>
+        <span class="text-slate-500 text-xs leading-relaxed">easier to decide what to work on next when tasks are ranked by priority and deadline.</span>
+      </div>
+
+      <div class="flex flex-col gap-1 rounded-2xl border border-slate-100 bg-slate-50 p-5">
+        <span class="text-xs font-semibold uppercase tracking-wide text-indigo-400">Momentum</span>
+        <span class="text-3xl font-black text-indigo-600">Zero</span>
+        <span class="text-slate-500 text-xs leading-relaxed">friction to mark a task done — one tap, and your list updates instantly to reflect progress.</span>
+      </div>
+
+    </div>
+
+    <!-- ROI summary block -->
+    <div class="flex flex-col gap-3 rounded-2xl bg-indigo-600 p-7 mt-auto">
+      <span class="text-xs font-bold uppercase tracking-widest text-indigo-200">The Bottom Line</span>
+      <h3 class="text-2xl font-black text-white leading-snug">
+        Less mental overhead. More done.
+      </h3>
+      <p class="text-indigo-100 text-sm leading-relaxed max-w-2xl">
+        MyToDo's combination of due dates, priority tags, and active/completed filtering means you spend your energy doing — not remembering, searching, or second-guessing. Your task list becomes a trusted system, not another source of anxiety.
+      </p>
+    </div>
+
+  </div>
+</section>
